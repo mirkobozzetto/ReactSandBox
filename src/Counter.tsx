@@ -11,7 +11,8 @@ const Counter = ({ check }: CounterProps) => {
   };
   return (
     <div>
-      {count < 4 ? <h1>{check}</h1> : null}
+      <h1>Hey {check}</h1>
+      {count < 4 ? <h1>Counter is to low</h1> : <h1>Counter is high</h1>}
       <h1>{count}</h1>
       <button onClick={counterHandler}>Increment</button>
     </div>

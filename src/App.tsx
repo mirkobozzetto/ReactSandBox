@@ -7,7 +7,7 @@ const App = () => {
     setText("Updated");
   };
   //
-  const [check, setCheck] = useState<string>("click more !");
+  const [check] = useState<string>("click more !");
 
   return (
     <div className="App">
