@@ -6,12 +6,17 @@ const App = () => {
   const updateTextHandler = () => {
     setText("Updated");
   };
+  //
+  const [check, setCheck] = useState<string>("click more !");
+
   return (
     <div className="App">
       <br />
       <h1>{text}</h1>
       <button onClick={updateTextHandler}>update me</button>
-      <Counter />
+      <br />
+
+      <Counter check={check} />
     </div>
   );
 };
