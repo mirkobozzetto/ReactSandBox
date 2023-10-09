@@ -7,13 +7,13 @@ type Todo = {
 };
 
 const Todos = () => {
-  const [todos, setTodos] = useState<Todo[]>([]); // Ici, nous utilisons le type Todo
+  const [todos, setTodos] = useState<Todo[]>([]);
 
   useEffect(() => {
     const fetchTodos = async () => {
       const res = await fetch("https://jsonplaceholder.typicode.com/todos");
-      const data: Todo[] = await res.json(); // Et ici aussi
-      setTodos(data); // Nous avons également ajouté cette ligne pour mettre à jour l'état
+      const data: Todo[] = await res.json();
+      setTodos(data);
     };
     fetchTodos();
   }, []);
